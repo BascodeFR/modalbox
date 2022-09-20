@@ -31,7 +31,7 @@ export const openModal  = (e) => {
         modal.removeEventListener('animationend', hideModal)
         modal = null
     }
-    modale.addEventListener('animationend', hideModal)  
+    modal.addEventListener('animationend', hideModal)  
   }
   
   const stopPropagation = function (e) {
