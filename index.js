@@ -24,7 +24,7 @@ export const openModal  = (e) => {
     modal.setAttribute('aria-hidden', true)
     modal.removeAttribute('aria-modal')
     modal.removeEventListener('click', closeModal)
-    modal.querySelector('.js-modal-close').removeEventListener('click', closeModal)
+      modal.querySelector('.js-modal-close').removeEventListener('click', closeModal)
     modal.querySelector('.js-modal-stop').removeEventListener('click', stopPropagation)
     const hideModal = function() {
         modal.style.display = "none"
@@ -42,9 +42,9 @@ export const openModal  = (e) => {
     e.preventDefault()
     let index = focusables.findIndex(f=> f === modal.querySelector(':focus'))
     if(e.shiftKey === true) {
-        index++
-    } else {
         index--
+    } else {
+        index++
     } 
     if(index < 0 ) {
         index = focusables.length - 1
